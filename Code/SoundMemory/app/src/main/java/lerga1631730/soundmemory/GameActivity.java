@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.IOException;
+
 public class GameActivity extends AppCompatActivity {
 
     MediaPlayer []mp;
@@ -26,17 +28,18 @@ public class GameActivity extends AppCompatActivity {
 
         final MediaPlayer mp1 = MediaPlayer.create(GameActivity.this,R.raw.claude);
         final MediaPlayer mp2 = MediaPlayer.create(GameActivity.this,R.raw.jean);
-
         mp =  new MediaPlayer[]{mp1,mp2};
 
 
         }
 
-    protected void Musique(View view) {
+    protected void Musique(View view) throws IOException {
         newTag = Integer.parseInt((String) view.getTag());
+
 
         if (mp[lastTag].isPlaying()) {
             mp[lastTag].stop();
+            mp[lastTag].prepare();
         }
         mp[newTag].start();
 
