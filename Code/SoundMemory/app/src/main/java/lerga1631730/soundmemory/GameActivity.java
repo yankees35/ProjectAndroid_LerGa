@@ -47,5 +47,35 @@ public class GameActivity extends AppCompatActivity {
         lastTag = newTag;
     }
 
+    protected void Pause(View view){
+
+        Button button = view.findViewById(R.id.btnPause);
+
+
+        if(button.getText() == "Play")
+        {
+            button.setText("Pause");
+            mp[lastTag].start();
+        }
+        else{
+            button.setText("Play");
+            mp[lastTag].pause();
+        }
+
+
+
+    }
+
+    protected void onPause() {
+
+        super.onPause();
+        mp[lastTag].stop();
+        try {
+            mp[lastTag].prepare();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }
