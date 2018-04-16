@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/Relative2"
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <Button
+            android:id="@+id/Rejouer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Quit"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/Quit"
+            android:layout_marginTop="76dp"
+            android:width="500px"
+            android:text="Return" />
+
+        <Button
+            android:id="@+id/Quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Rejouer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="79dp"
+            android:width="500px"
+            android:text="Quit" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:width="450px"
+            android:textSize="50px"
+            android:textStyle="italic"
+            android:text="Le jeu est en pause" />
+
+        <Button
+            android:id="@+id/Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Rejouer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:width="500px"
+            android:text="Home" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

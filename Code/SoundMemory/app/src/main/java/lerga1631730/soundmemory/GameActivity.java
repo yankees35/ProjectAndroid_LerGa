@@ -1,17 +1,22 @@
 package lerga1631730.soundmemory;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.media.Image;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -51,18 +56,8 @@ public class GameActivity extends AppCompatActivity {
 
         Button button = view.findViewById(R.id.btnPause);
 
-
-        if(button.getText() == "Play")
-        {
-            button.setText("Pause");
-            mp[lastTag].start();
-        }
-        else{
-            button.setText("Play");
-            mp[lastTag].pause();
-        }
-
-
+        mp[lastTag].pause();
+        showDialog();
 
     }
 
@@ -75,6 +70,47 @@ public class GameActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void showDialog(){
+        final Dialog myDialog = new Dialog(this);
+
+        myDialog.setTitle("Menu Pause");
+        myDialog.setContentView(R.layout.dialog);
+
+        Button replay = (Button)myDialog.findViewById(R.id.Rejouer);
+
+        replay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+                mp[lastTag].start();
+            }
+        });
+
+
+        Button home = (Button)myDialog.findViewById(R.id.Back);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+                Intent intent = new Intent(GameActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        Button quit = (Button)myDialog.findViewById(R.id.Quit);
+        quit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+                finish();
+                System.exit(0);
+            }
+        });
+
+        myDialog.show();
     }
 
 
