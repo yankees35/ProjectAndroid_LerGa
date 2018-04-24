@@ -17,22 +17,12 @@
             android:id="@+id/Rejouer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/Quit"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/Quit"
-            android:layout_marginTop="76dp"
+            android:layout_alignLeft="@+id/Back"
+            android:layout_alignStart="@+id/Back"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="19dp"
             android:width="500px"
             android:text="Return" />
-
-        <Button
-            android:id="@+id/Quit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Rejouer"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="79dp"
-            android:width="500px"
-            android:text="Quit" />
 
         <TextView
             android:id="@+id/textView"
