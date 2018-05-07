@@ -13,19 +13,6 @@
         tools:layout_editor_absoluteX="36dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <Button
-            android:id="@+id/btnPause"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="23dp"
-            android:layout_marginLeft="29dp"
-            android:layout_marginStart="29dp"
-            android:onClick="Pause"
-            android:text="Pause" />
-
         <RelativeLayout
             android:id="@+id/Relative"
             android:layout_width="match_parent"
@@ -36,48 +23,48 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
+                android:layout_alignLeft="@+id/btnPause"
+                android:layout_alignStart="@+id/btnPause"
                 android:layout_alignTop="@+id/imageView2"
-                android:layout_marginEnd="33dp"
-                android:layout_marginRight="33dp"
-                android:layout_toLeftOf="@+id/imageView2"
-                android:layout_toStartOf="@+id/imageView2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:onClick="Musique"
                 android:tag="0"
                 app:srcCompat="@android:color/holo_blue_dark" />
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="59dp"
+                android:layout_alignLeft="@+id/imageView5"
+                android:layout_alignStart="@+id/imageView5"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="57dp"
                 android:onClick="Musique"
                 android:tag="1"
                 app:srcCompat="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
+                android:layout_alignLeft="@+id/imageView6"
+                android:layout_alignStart="@+id/imageView6"
                 android:layout_alignTop="@+id/imageView2"
-                android:layout_toEndOf="@+id/imageView2"
-                android:layout_toRightOf="@+id/imageView2"
                 android:onClick="Musique"
                 android:tag="2"
-                android:layout_marginLeft="60px"
                 app:srcCompat="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
                 android:layout_alignLeft="@+id/imageView"
                 android:layout_alignStart="@+id/imageView"
                 android:layout_below="@+id/imageView"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="62dp"
                 android:onClick="Musique"
                 android:tag="2"
                 app:srcCompat="@android:color/black"
@@ -85,11 +72,10 @@
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
-                android:layout_alignLeft="@+id/imageView2"
-                android:layout_alignStart="@+id/imageView2"
                 android:layout_alignTop="@+id/imageView4"
+                android:layout_centerHorizontal="true"
                 android:onClick="Musique"
                 android:tag="2"
                 app:srcCompat="@android:color/holo_purple"
@@ -97,10 +83,10 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
-                android:layout_alignLeft="@+id/imageView3"
-                android:layout_alignStart="@+id/imageView3"
+                android:layout_alignLeft="@+id/imageView9"
+                android:layout_alignStart="@+id/imageView9"
                 android:layout_alignTop="@+id/imageView5"
                 android:onClick="Musique"
                 android:tag="2"
@@ -109,12 +95,12 @@
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
                 android:layout_alignLeft="@+id/imageView4"
                 android:layout_alignStart="@+id/imageView4"
                 android:layout_below="@+id/imageView4"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="62dp"
                 android:onClick="Musique"
                 android:tag="2"
                 app:srcCompat="@color/colorPrimary"
@@ -122,10 +108,11 @@
 
             <ImageView
                 android:id="@+id/imageView8"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
-                android:layout_alignLeft="@+id/imageView5"
-                android:layout_alignStart="@+id/imageView5"
+                android:layout_centerHorizontal="true"
+                android:layout_alignLeft="@+id/imageView11"
+                android:layout_alignStart="@+id/imageView11"
                 android:layout_alignTop="@+id/imageView7"
                 android:onClick="Musique"
                 android:tag="2"
@@ -134,23 +121,23 @@
 
             <ImageView
                 android:id="@+id/imageView9"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
-                android:layout_alignLeft="@+id/imageView6"
-                android:layout_alignStart="@+id/imageView6"
+                android:layout_alignLeft="@+id/imageView12"
+                android:layout_alignStart="@+id/imageView12"
                 android:layout_alignTop="@+id/imageView8"
-                app:srcCompat="@android:color/holo_blue_bright"
                 android:onClick="Musique"
+                app:srcCompat="@android:color/holo_blue_bright"
                 tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageView10"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
-                android:layout_alignLeft="@+id/imageView7"
-                android:layout_alignStart="@+id/imageView7"
+                android:layout_alignEnd="@+id/imageView7"
+                android:layout_alignRight="@+id/imageView7"
                 android:layout_below="@+id/imageView7"
-                android:layout_marginTop="26dp"
+                android:layout_marginTop="53dp"
                 android:onClick="Musique"
                 android:tag="2"
                 app:srcCompat="@color/colorPrimaryDark"
@@ -158,11 +145,13 @@
 
             <ImageView
                 android:id="@+id/imageView11"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
-                android:layout_alignLeft="@+id/imageView8"
-                android:layout_alignStart="@+id/imageView8"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="200px"
                 android:layout_alignTop="@+id/imageView10"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
                 android:onClick="Musique"
                 android:tag="2"
                 app:srcCompat="@android:color/holo_red_dark"
@@ -170,15 +159,40 @@
 
             <ImageView
                 android:id="@+id/imageView12"
-                android:layout_width="150px"
+                android:layout_width="250px"
                 android:layout_height="150px"
-                android:layout_alignLeft="@+id/imageView9"
-                android:layout_alignStart="@+id/imageView9"
+                android:layout_marginRight="110px"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/imageView11"
                 android:onClick="Musique"
                 android:tag="2"
                 app:srcCompat="@android:color/holo_orange_dark"
                 tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/btnPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:onClick="Pause"
+                android:text="Pause" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="11dp"
+                android:text="SauceBrune"
+                android:textSize="50px" />
 
         </RelativeLayout>
 
