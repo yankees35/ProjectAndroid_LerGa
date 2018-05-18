@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +25,55 @@ public class MainActivity extends AppCompatActivity {
 
     public void Click(View view)
     {
-        Intent intent = new Intent(MainActivity.this, GameActivity.class);
-        startActivity(intent);
+        showDialog();
+    }
+
+    private void showDialog(){
+            final Dialog myDialog = new Dialog(this);
+
+
+            myDialog.setTitle("Menu Choix");
+            myDialog.setContentView(R.layout.choix);
+
+            ImageView genesis = (ImageView) myDialog.findViewById(R.id.Genesis);
+             genesis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+                Intent intent = new Intent(MainActivity.this,GameActivity.class);
+                String choix = "genesis";
+                intent.putExtra("Choix",choix);
+                finish();
+                startActivity(intent);
+                }
+            });
+
+            ImageView disturbed = (ImageView) myDialog.findViewById(R.id.Disturbed);
+            disturbed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    myDialog.dismiss();
+                    Intent intent = new Intent(MainActivity.this,GameActivity.class);
+                    String choix = "disturbed";
+                    intent.putExtra("Choix",choix);
+                    finish();
+                    startActivity(intent);
+                }
+            });
+
+            ImageView random = (ImageView) myDialog.findViewById(R.id.Random);
+            random.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    myDialog.dismiss();
+                    Intent intent = new Intent(MainActivity.this,GameActivity.class);
+                    String choix = "random";
+                    intent.putExtra("Choix",choix);
+                    finish();
+                    startActivity(intent);
+                }
+            });
+            myDialog.show();
     }
 
     public void Quit(View v)
